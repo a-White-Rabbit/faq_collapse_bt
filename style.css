@@ -1,116 +1,107 @@
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Castoro&family=Raleway:wght@400;700&display=swap');
-
-/* main */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-   background-color: #61BAA5;
-   font-family: 'Raleway', sans-serif;
+  font-family: 'Muli', sans-serif;
+  background-color: #f0f0f0;
 }
 
 h1 {
-   margin: 50px 0 30px;
-   text-align: center;
+  margin: 50px 0 30px;
+  text-align: center;
 }
 
 .faq-container {
-   margin: 0 auto;
-   max-width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .faq {
-   background-color: transparent;
-   border: 3px solid #6B2B4A;
-   border-radius: 10px;
-   color: #6B2B4A;
-   margin: 20px 0;
-   overflow: hidden;
-   padding: 30px;
-   position: relative;
-   transition: 0.3s ease;
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .faq.active {
-   background-color: transparent;
-   color: #6B2B4A;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .faq.active::before,
 .faq.active::after {
-   color: #F06B3E;
-   /* adds the icon via unicode id from font-awesome */
-   content: '\f075';
-   /* must add the font-family when adding font-awesome in CSS */
-   font-family: 'Font Awesome 5 Free';
-   font-size: 9rem;
-   left: 20px;
-   opacity: 0.2;
-   position: absolute;
-   top: 30px;
-   z-index: 0;
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
 }
 
 .faq.active::before {
-   color: #035E57;
-   left: -30px;
-   top: -20px;
-   transform: rotateY(180deg);
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
 }
 
 .faq-title {
-   margin: 0 35px 0 0;
+  margin: 0 35px 0 0;
 }
 
 .faq-text {
-   /* hides text when not active */
-   display: none;
-   margin: 30px 0 0;
+  display: none;
+  margin: 30px 0 0;
 }
 
 .faq.active .faq-text {
-   /* shows text when active */
-   display: block;
+  display: block;
 }
 
 .faq-toggle {
-   align-items: center;
-   background-color: transparent;
-   border: 0;
-   /* rounds the 'x' button */
-   border-radius: 50%;
-   color: #6B2B4A;
-   cursor: pointer;
-   display: flex;
-   font-size: 18px;
-   height: 30px;
-   justify-content: center;
-   padding: 0;
-   position: absolute;
-   right: 30px;
-   top: 30px;
-   width: 30px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .faq-toggle:focus {
-   outline: 0;
+  outline: 0;
 }
 
 .faq-toggle .fa-times {
-   display: none;
+  display: none;
 }
 
 .faq.active .faq-toggle .fa-times {
-   display: block;
+  color: #fff;
+  display: block;
 }
 
 .faq.active .faq-toggle .fa-chevron-down {
-   display: none;
+  display: none;
 }
 
 .faq.active .faq-toggle {
-   background-color: #F4FAD9;
+  background-color: #9fa4a8;
 }
